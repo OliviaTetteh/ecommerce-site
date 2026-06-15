@@ -69,14 +69,30 @@
             <h3>AIRPODS</h3>
             <p>GHC 1,499.99</p>
             <button onclick="addToCart(6, 'AIRPODS', 1499.99)">Add to Cart</button>
+          </div>
           <!-- Add more product cards as needed -->
       </section>
 
-    <main>
-      <p>Welcome to my e-commerce site!</p>
-    </main>
-    <footer>
-      <p>&copy; 2023 My E-commerce Site. All rights reserved.</p>
+  <!-- Footer -->
+  <footer>
+    <div>
+    <img src="/ecommerce-site/Images/EMS.svg" alt="Logo" class="footer-logo" />
+    </div>
+      <p>&copy; Designed and crafted by Olivia A. Tetteh</p>
     </footer>
+
+ <!-- Cart Modal -->
+  <div id="cart-modal" class="modal hidden">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p>Total: GHC <span id="cart-total">0.00</span></p>
+    <form id="user-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="address" placeholder="Address" required />
+    </form>
+    <button oneclick="closeCart()">Checkout</button>
+  </div>
+  <script src="script.js"></script>
   </body>
 </html>
