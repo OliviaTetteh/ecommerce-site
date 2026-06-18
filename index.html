@@ -38,37 +38,37 @@
             <img src="Images/samsungTV.png" alt="SAMSUNG TV" />
             <h3>SAMSUNG TV</h3>
             <p>GHC 6,999.99</p>
-             <button onclick="addToCart(1, 'SAMSUNG TV', 6999.99)">Add to Cart</button>
+             <button type="button">Add to Cart</button>
           </div>
           <div class="product">
             <img src="Images/pixel4a.png" alt="PIXEL 4A" />
             <h3>PIXEL 4A</h3>
             <p>GHC 3,499.99</p>
-            <button onclick="addToCart(2, 'PIXEL 4A', 3499.99)">Add to Cart</button>
+            <button type="button">Add to Cart</button>
           </div>
            <div class="product">
             <img src="Images/ps5.png" alt="PS5" />
             <h3>PS5</h3>
             <p>GHC 4,999.99</p>
-            <button onclick="addToCart(3, 'PS5', 4999.99)">Add to Cart</button>
+            <button type="button">Add to Cart</button>
           </div>
            <div class="product">
             <img src="Images/macbookAir.png" alt="MACBOOK AIR" />
             <h3>MACBOOK AIR</h3>
             <p>GHC 8,999.99</p>
-            <button onclick="addToCart(4, 'MACBOOK AIR', 8999.99)">Add to Cart</button>
+            <button type="button">Add to Cart</button>
           </div>
            <div class="product">
             <img src="Images/appleWatch.png" alt="APPLE WATCH" />
             <h3>APPLE WATCH</h3>
             <p>GHC 2,999.99</p>
-            <button onclick="addToCart(5, 'APPLE WATCH', 2999.99)">Add to Cart</button>
+            <button type="button">Add to Cart</button>
           </div>
           <div class="product">
             <img src="Images/airpods.png" alt="AIRPODS" />
             <h3>AIRPODS</h3>
             <p>GHC 1,499.99</p>
-            <button onclick="addToCart(6, 'AIRPODS', 1499.99)">Add to Cart</button>
+            <button type="button">Add to Cart</button>
           </div>
           <!-- Add more product cards as needed -->
       </section>
@@ -83,22 +83,56 @@
 
  <!-- Cart Modal -->
   <div id="cart-modal" class="modal hidden">
-    <h2>Your Cart</h2>
-    <div id="cart-items"></div>
+    <div class="modal-panel">
+      <h2>Your Cart</h2>
+      <div class="cart-content">
+        <section class="cart-section">
+          <h3>Items</h3>
+          <div id="cart-items"></div>
+        </section>
+
+   <section class="cart-section">
+          <h3>User Details</h3>
+          <form id="user-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" id="name" placeholder="Your Name" required />
+              <small class="field-error" data-error-for="name"></small>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" id="email" placeholder="Email" required />
+              <small class="field-error" data-error-for="email"></small>
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input type="tel" id="phone" placeholder="Phone Number" required />
+              <small class="field-error" data-error-for="phone"></small>
+            </label>
+          </form>
+    </section>
+
+  <section class="cart-section">
+     <h3>Total Amount</h3>
     <p>Total: GHC <span id="cart-total">0.00</span></p>
-    <form id="user-form">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="text" id="address" placeholder="Address" required />
-    </form>
-    <button onclick="closeCart()">Checkout</button>
+  </section>
+
+   <section class="cart-section cart-actions">
+          <h3>Actions</h3>
+          <button type="button" onclick="closeCart()">Continue Shopping</button>
+          <button type="submit" form="user-form">Checkout</button>
+    </section>
+      </div>
+    </div>
   </div>
 
   <!-- Summary Modal -->
   <div id="summary-modal" class="hidden">
-    <h2>Purchase Successful, Thank you for your purchase!</h2>
-    <div id="summary-content"></div>
-    <button onclick="closeSummary()">Close</button>
+    <div class="modal-panel">
+      <h2>Purchase Successful</h2>
+      <div id="summary-content"></div>
+      <button type="button" onclick="closeSummary()">Ok</button>
+    </div>
   </div>
    
   <script src="script.js"></script>
