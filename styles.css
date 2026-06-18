@@ -65,3 +65,164 @@ header nav a:hover {
     margin: 1rem auto;
     display: block;
 }
+
+#shop-n0w-btn {
+    background-color: #ff7a00;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#shop-n0w-btn:hover {
+    background-color: #e56a00;
+}
+
+/* About Section */
+#about {
+    padding: 2rem 1rem;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
+
+#about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Shop Section */
+#shop {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#shop h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+product h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+product p{
+    color: #333;
+    font-weight: 500;
+}
+
+product button {
+    background-color: #ff7a00;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+product button:hover {
+    background-color: #e56a00;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    height: 40px;
+}
+
+footer p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Cart Modal */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 30%;
+    top: 0;
+    width: 40%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Summary Modal */
+#summary-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 30%;
+    top: 20%;
+    width: 40%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+}
+
+#summary-modal.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal, #summary-modal {
+        left: 10%;
+        width: 80%;
+    }
+}
