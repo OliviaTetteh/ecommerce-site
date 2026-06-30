@@ -3,7 +3,7 @@ Development of an e-commerce site with a simple shopping cart integrated with Pa
 
 ## LOGO
 
-![Logo]("C:\Users\Ahinee\Desktop\Frontend Project\ecommerce-site\Images\heroImage.png")
+
 ![alt text](heroImage.png)
 
 ## Upon Completion.
