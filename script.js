@@ -252,7 +252,7 @@ syncAllButtons();
 
 function closeCart() {
   document.getElementById("cart-modal").classList.add("hidden");
-  alert("Payment canceled.");
+  alert("Cart Window Closed. Continue shopping.");
 }
 
 function startPaystackCheckout(event) {
