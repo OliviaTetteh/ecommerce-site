@@ -254,9 +254,11 @@ function closeCart() {
   document.getElementById("cart-modal").classList.add("hidden");
 }
 
-// Paystack Checkout (Test Mode)
-document.getElementById("user-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+function startPaystackCheckout(event) {
+  if (event) {
+    event.preventDefault();
+  }
+
   if (!validateCartForm()) {
     return;
   }
@@ -292,7 +294,15 @@ document.getElementById("user-form").addEventListener("submit", function(e) {
     }
   });
   handler.openIframe();
-});
+}
+
+// Paystack Checkout (Test Mode)
+document.getElementById("user-form").addEventListener("submit", startPaystackCheckout);
+
+const checkoutButton = document.getElementById("checkout-btn");
+if (checkoutButton) {
+  checkoutButton.addEventListener("click", startPaystackCheckout);
+}
 
 // Summary Modal
 function showSummary(customer, items) {
