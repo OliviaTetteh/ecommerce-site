@@ -220,6 +220,10 @@ document.getElementById("cart-btn").addEventListener("click", () => {
   document.getElementById("cart-modal").classList.remove("hidden");
 });
 
+document.getElementById("shop-now-btn").addEventListener("click", () => {
+  document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
+});
+
 document.getElementById("cart-modal").addEventListener("click", event => {
   if (event.target === document.getElementById("cart-modal")) {
     closeCart();
@@ -250,9 +254,12 @@ syncAllButtons();
   }
 });
 
-function closeCart() {
+function closeCart(showMessage = true) {
   document.getElementById("cart-modal").classList.add("hidden");
-  alert("Cart Window Closed. Continue shopping.");
+
+  if (showMessage) {
+    alert("Cart Window Closed. Continue shopping.");
+  }
 }
 
 function startPaystackCheckout(event) {
@@ -270,7 +277,7 @@ function startPaystackCheckout(event) {
     items: cart.map(item => ({ ...item })),
   };
 
-  closeCart();
+  closeCart(false);
 
   var handler = PaystackPop.setup({
     key: 'pk_test_75deac58b274e52f5c306a652e71b790db119e3b',
