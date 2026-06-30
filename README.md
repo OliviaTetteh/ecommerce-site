@@ -2,8 +2,7 @@
 Development of an e-commerce site with a simple shopping cart integrated with Paystack checkout/payment. The EMS website is a fully responsive ecommerce website with maximum compatiblities in all mobile devices and built using HTML, CSS and JavaScript.
 
 ## LOGO
----
-</> Markdown
+
 ![Logo]("C:\Users\Ahinee\Desktop\Frontend Project\ecommerce-site\Images\heroImage.png")
 
 ## Upon Completion.
@@ -35,7 +34,7 @@ Upon the full development of this website, all features that are expected (or re
 
 
 ## Installing EMS
----
+
 
 To install EMS, follow these steps:
 
