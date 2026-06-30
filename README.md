@@ -4,6 +4,7 @@ Development of an e-commerce site with a simple shopping cart integrated with Pa
 ## LOGO
 
 ![Logo]("C:\Users\Ahinee\Desktop\Frontend Project\ecommerce-site\Images\heroImage.png")
+![alt text](heroImage.png)
 
 ## Upon Completion.
 Upon the full development of this website, all features that are expected (or required) to work include:
@@ -42,7 +43,7 @@ Linux and macOS:
 sudo git clone https://github.com/OliviaTetteh/ecommerce-site.git
 
 Windows:
-git clone https://github.com/codewithsadee/anon-ecommerce-website.git
+git clone https://github.com/OliviaTetteh/ecommerce-site.git
 
 Contact:
 If you want to reach me [Visit my portfolio](https://github.com/OliviaTetteh).
